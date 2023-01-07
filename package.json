@@ -1,0 +1,65 @@
+{
+  "name": "vue-demi-sfc-component-template",
+  "version": "0.0.1",
+  "description": "template component for vue-demi, can dev and build",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "./types/index.d.ts",
+  "style": "dist/style.css",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "files": [
+    "scripts",
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "build": "npm run clean && run-s build:*",
+    "build:2": "vue-demi-switch 2 vue2 && pnpm --filter vue2-playground build",
+    "build:2.7": "vue-demi-switch 2.7 && pnpm --filter vue2.7-playground build",
+    "build:3": "vue-demi-switch 3 vue3 && pnpm --filter vue3-playground build",
+    "clean": "rimraf ./dist",
+    "dev:2": "vue-demi-switch 2 vue2 && pnpm --filter vue2-playground dev",
+    "dev:2.7": "vue-demi-switch 2.7 && pnpm --filter vue2.7-playground dev",
+    "dev:3": "vue-demi-switch 3 vue3 && pnpm --filter vue3-playground dev",
+    "lint:fix": "eslint . --ext .vue,.js,.jsx,.ts,.tsx --fix --ignore-path .gitignore",
+    "postinstall": "node scripts/postinstall.js",
+    "prepublishOnly": "npm run build",
+    "release": "npm publish"
+  },
+  "author": "Shimada666<649940882@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.4.9",
+    "vue": "^2.6.0 || >=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "vue-demi": "^0.13.11"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.34.0",
+    "@types/node": "^18.11.18",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.31.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "sass": "^1.57.1",
+    "typescript": "~4.7.4",
+    "vite": "^2.9.14",
+    "vue-tsc": "^0.40.13",
+    "vue2": "npm:vue@2",
+    "vue3": "npm:vue@3"
+  }
+}
