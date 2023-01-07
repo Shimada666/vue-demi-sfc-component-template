@@ -29,7 +29,7 @@
     "lint:fix": "eslint . --ext .vue,.js,.jsx,.ts,.tsx --fix --ignore-path .gitignore",
     "postinstall": "node scripts/postinstall.js",
     "prepublishOnly": "npm run build",
-    "release": "npm publish"
+    "release": "bumpp --commit --push --tag && npm publish"
   },
   "author": "Shimada666<649940882@qq.com>",
   "license": "MIT",
