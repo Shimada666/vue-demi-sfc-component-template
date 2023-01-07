@@ -1,6 +1,6 @@
 {
   "name": "vue-demi-sfc-component-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "template component for vue-demi, can dev and build",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
