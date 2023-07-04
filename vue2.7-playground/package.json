@@ -9,7 +9,7 @@
     "vue": "^2.7.14"
   },
   "devDependencies": {
-    "vite": "^2.9.9",
+    "vite": "^4.3.9",
     "@vitejs/plugin-vue2": "^1.1.2"
   }
 }

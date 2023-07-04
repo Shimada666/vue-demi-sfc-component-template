@@ -24,7 +24,7 @@
   "scripts": {
     "build": "npm run clean && run-s build:*",
     "build:2": "vue-demi-switch 2 vue2 && pnpm --filter vue2-playground build",
-    "build:2.7": "vue-demi-switch 2.7 && pnpm --filter vue2.7-playground build",
+    "build:2.7": "vue-demi-switch 2.7 vue2 && pnpm --filter vue2.7-playground build",
     "build:3": "vue-demi-switch 3 vue3 && pnpm --filter vue3-playground build",
     "clean": "rimraf ./dist",
     "dev:2": "vue-demi-switch 2 vue2 && pnpm --filter vue2-playground dev",
@@ -50,7 +50,7 @@
     }
   },
   "dependencies": {
-    "vue-demi": "^0.13.11"
+    "vue-demi": "^0.14.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.0",
@@ -61,7 +61,7 @@
     "rimraf": "^3.0.2",
     "sass": "^1.57.1",
     "typescript": "~4.7.4",
-    "vite": "^2.9.14",
+    "vite": "^4.3.9",
     "vue-tsc": "^0.40.13",
     "vue2": "npm:vue@2",
     "vue3": "npm:vue@3"
