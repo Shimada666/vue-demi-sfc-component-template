@@ -1,21 +1,26 @@
 {
   "name": "vue-demi-sfc-component-template",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "template component for vue-demi, can dev and build",
+  "author": "Shimada666<649940882@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
+    },
+    "./dist/style.css": {
+      "require": "./dist/style.css",
+      "import": "./dist/style.css"
+    }
+  },
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "./types/index.d.ts",
   "style": "dist/style.css",
-  "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.cjs.js"
-    },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
-    }
-  },
   "files": [
     "scripts",
     "dist",
@@ -34,11 +39,6 @@
     "postinstall": "node scripts/postinstall.js",
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --push --tag && npm publish"
-  },
-  "author": "Shimada666<649940882@qq.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.4.9",
@@ -65,5 +65,14 @@
     "vue-tsc": "^0.40.13",
     "vue2": "npm:vue@2",
     "vue3": "npm:vue@3"
+  },
+  "pnpm": {
+    "packageExtensions": {
+      "vue-template-compiler": {
+        "peerDependencies": {
+          "vue": "~2.6.14"
+        }
+      }
+    }
   }
 }
