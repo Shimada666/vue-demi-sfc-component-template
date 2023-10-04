@@ -1,10 +1,11 @@
 import * as path from 'path'
 import { defineConfig } from 'vite'
 import { isVue2 } from 'vue-demi'
+import UnoCSS from 'unocss/vite'
 
 const outputName = 'index'
 export const defaultPlugins = [
-
+  UnoCSS(),
 ]
 
 // https://vitejs.dev/config/

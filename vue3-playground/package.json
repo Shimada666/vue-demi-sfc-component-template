@@ -6,10 +6,10 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "vite": "^4.3.9",
-    "@vitejs/plugin-vue": "^2.3.4"
+    "@vitejs/plugin-vue": "^2.3.4",
+    "vite": "^4.3.9"
   }
 }
