@@ -46,10 +46,10 @@ importers:
         version: 4.7.4
       unocss:
         specifier: ^0.55.7
-        version: 0.55.7(postcss@8.4.31)(vite@4.4.9)
+        version: 0.55.7(postcss@8.4.31)(vite@4.5.2)
       vite:
-        specifier: ^4.3.9
-        version: 4.4.9(@types/node@18.18.1)(sass@1.68.0)
+        specifier: ^4.5.2
+        version: 4.5.2(@types/node@18.18.1)(sass@1.68.0)
       vue-tsc:
         specifier: ^0.40.13
         version: 0.40.13(typescript@4.7.4)
@@ -1197,7 +1197,7 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@unocss/astro@0.55.7(vite@4.4.9):
+  /@unocss/astro@0.55.7(vite@4.5.2):
     resolution: {integrity: sha512-mw8r14ArxUQBVCCisAJlF/WsZb650iBsduD/lXMk56N/nQ3MMArCcn62kcAxgZSb5tfIOQGQu/tbR8hEcD8y2g==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0
@@ -1207,8 +1207,8 @@ packages:
     dependencies:
       '@unocss/core': 0.55.7
       '@unocss/reset': 0.55.7
-      '@unocss/vite': 0.55.7(vite@4.4.9)
-      vite: 4.4.9(@types/node@18.18.1)(sass@1.68.0)
+      '@unocss/vite': 0.55.7(vite@4.5.2)
+      vite: 4.5.2(@types/node@18.18.1)(sass@1.68.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1371,7 +1371,7 @@ packages:
       '@unocss/core': 0.55.7
     dev: true
 
-  /@unocss/vite@0.55.7(vite@4.4.9):
+  /@unocss/vite@0.55.7(vite@4.5.2):
     resolution: {integrity: sha512-xmdyDnt9Ag4o7DGl22/P6MaB+HSjWOQw9qYYzIefSv3SVUvn3cEhIX/PCWqFp8Kts2HyvAoJLbZmygSf1XdZNQ==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0
@@ -1386,7 +1386,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.3.1
       magic-string: 0.30.4
-      vite: 4.4.9(@types/node@18.18.1)(sass@1.68.0)
+      vite: 4.5.2(@types/node@18.18.1)(sass@1.68.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -4723,7 +4723,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss@0.55.7(postcss@8.4.31)(vite@4.4.9):
+  /unocss@0.55.7(postcss@8.4.31)(vite@4.5.2):
     resolution: {integrity: sha512-3W9P7vj2EhSk/4oPCHBS0VgrwSf5zZL6Az1/XARVOpBnRJtCM2szFInYxHkMgt9pkZTsW8SFCuk/g+QIJ6A8tg==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -4735,7 +4735,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      '@unocss/astro': 0.55.7(vite@4.4.9)
+      '@unocss/astro': 0.55.7(vite@4.5.2)
       '@unocss/cli': 0.55.7
       '@unocss/core': 0.55.7
       '@unocss/extractor-arbitrary-variants': 0.55.7
@@ -4754,8 +4754,8 @@ packages:
       '@unocss/transformer-compile-class': 0.55.7
       '@unocss/transformer-directives': 0.55.7
       '@unocss/transformer-variant-group': 0.55.7
-      '@unocss/vite': 0.55.7(vite@4.4.9)
-      vite: 4.4.9(@types/node@18.18.1)(sass@1.68.0)
+      '@unocss/vite': 0.55.7(vite@4.5.2)
+      vite: 4.5.2(@types/node@18.18.1)(sass@1.68.0)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -4927,6 +4927,43 @@ packages:
 
   /vite@4.4.9(@types/node@18.18.1)(sass@1.68.0):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      '@types/node': 18.18.1
+      esbuild: 0.18.20
+      postcss: 8.4.31
+      rollup: 3.29.4
+      sass: 1.68.0
+    optionalDependencies:
+      fsevents: 2.3.3
+    dev: true
+
+  /vite@4.5.2(@types/node@18.18.1)(sass@1.68.0):
+    resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
